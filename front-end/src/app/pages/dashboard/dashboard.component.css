@@ -1,0 +1,45 @@
+.dashboard-container {
+  background: linear-gradient(135deg, #e0f7fa, #cfd8dc);
+  min-height: 100vh;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: background 0.5s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.dashboard-container:hover {
+  background: linear-gradient(135deg, #b2ebf2, #b0bec5);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+mat-tab-group {
+  background-color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 15px;
+  transition: box-shadow 0.3s ease;
+}
+
+mat-tab-group:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+mat-tab-label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.mat-tab-label-active {
+  color: #0288d1;
+}
+
+mat-tab-label:hover {
+  color: #0288d1;
+}
+
+.dashboard-container mat-tab-group {
+  margin-top: 30px;
+}
+

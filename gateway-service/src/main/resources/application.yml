@@ -1,0 +1,96 @@
+server:
+  port: 8888
+  forward-headers-strategy: framework
+
+jwt:
+  secret: MiAVzqUXy5Tfr1kVIGpPMiAVzqUXy5Tfr1kVIGpP
+  expiration: 86400
+
+spring:
+  application:
+    name: gateway-service
+
+  cloud:
+    discovery:
+      enabled: true
+    config:
+      enabled: false
+
+    gateway:
+      routes:
+        - id: user-service
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/users/**
+          filters:
+            - JwtTokenFilterFactory
+
+        - id: auth-service
+          uri: lb://AUTH-SERVICE
+          predicates:
+            - Path=/auth/**
+          filters:
+            - JwtTokenFilterFactory
+
+        - id: event-service
+          uri: lb://EVENT-SERVICE
+          predicates:
+            - Path=/event/**
+            - Path=/offertypes/**
+            - Path=/prices/**
+          filters:
+            - JwtTokenFilterFactory
+
+        - id: key-generator-service
+          uri: lb://KEY-GENERATOR-SERVICE
+          predicates:
+            - Path=/key-generator/**
+          filters:
+            - JwtTokenFilterFactory
+
+        - id: notification-service
+          uri: lb://NOTIFICATION-SERVICE
+          predicates:
+            - Path=/notifications/**
+          filters:
+            - JwtTokenFilterFactory
+
+        - id: payment-service
+          uri: lb://PAYMENT-SERVICE
+          predicates:
+            - Path=/payments/**
+          filters:
+            - JwtTokenFilterFactory
+
+        - id: ticket-service
+          uri: lb://TICKET-SERVICE
+          predicates:
+            - Path=/tickets/**
+          filters:
+            - JwtTokenFilterFactory
+
+        - id: venue-service
+          uri: lb://VENUE-SERVICE
+          predicates:
+            - Path=/venues/**
+            - Path=/locations/**
+          filters:
+            - JwtTokenFilterFactory
+
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:4200"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+            allowCredentials: true
+
+springdoc:
+  swagger-ui:
+    path: '/swagger-ui.html'
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

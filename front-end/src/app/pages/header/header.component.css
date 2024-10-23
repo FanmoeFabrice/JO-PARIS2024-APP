@@ -1,0 +1,86 @@
+.header-toolbar {
+  background-color: #2C3E50; /* Fond gris anthracite */
+  color: #ECF0F1; /* Texte gris clair pour un bon contraste */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 60px;
+  width: auto;
+  margin-right: 10px;
+}
+
+.app-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ECF0F1; /* Couleur du texte gris clair */
+}
+
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+button {
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #34495E; /* Animation au survol avec un fond plus sombre */
+  color: #FFFFFF; /* Texte blanc au survol */
+}
+
+.login-button {
+  background-color: #3498DB; /* Bleu pour les boutons de login */
+  color: #FFFFFF;
+}
+
+.register-button {
+  background-color: #E74C3C; /* Rouge pour les boutons de register */
+  color: #FFFFFF;
+}
+
+.dashboard-button {
+  background-color: #27AE60; /* Vert pour le Dashboard (admin) */
+  color: #FFFFFF;
+}
+
+.logout-button {
+  border-color: #E74C3C; /* Bordure rouge pour Logout */
+  color: #E74C3C;
+}
+
+.mat-button, .mat-raised-button, .mat-stroked-button {
+  padding: 10px 15px;
+  border-radius: 25px;
+}
+
+.mat-raised-button {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .app-title {
+    font-size: 1.2rem;
+  }
+
+  .logo {
+    height: 50px;
+  }
+
+  .right-section {
+    gap: 10px;
+  }
+}

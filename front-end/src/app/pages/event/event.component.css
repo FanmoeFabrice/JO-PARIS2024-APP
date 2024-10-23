@@ -1,0 +1,29 @@
+.container {
+  background-image: url('/assets/images/olympic_event_background.png');
+  background-size: cover;
+  background-position: center;
+  padding: 120px;
+  border-radius: 15px;
+}
+
+mat-card {
+  background: rgba(255, 255, 255, 0.8);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+mat-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  mat-grid-list {
+    cols: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  mat-grid-list {
+    cols: 1;
+    rowHeight: 'auto';
+  }
+}

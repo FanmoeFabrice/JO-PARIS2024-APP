@@ -1,0 +1,36 @@
+.footer-toolbar {
+  background-color: #000000; /* Fond noir pour un look premium */
+  color: #FFD700; /* Texte doré pour un aspect prestigieux */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 20px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3); /* Ombre subtile pour un effet flottant */
+  z-index: 1000;
+}
+
+.footer-content {
+  text-align: center;
+}
+
+.app-title {
+  font-size: 1rem;
+  font-weight: 700; /* Texte plus épais pour accentuer le style doré */
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+  .app-title {
+    font-size: 0.8rem; /* Ajustement pour tablettes */
+  }
+}
+
+@media (max-width: 480px) {
+  .app-title {
+    font-size: 0.7rem; /* Ajustement pour téléphones */
+  }
+}
