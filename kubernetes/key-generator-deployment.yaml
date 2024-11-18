@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: key-generator-service
-          image: docker.io/steveaurel/key-generator-service:1.0.0
+          image: docker.io/fabricefanmoe/key-generator-service:1.0.0
           imagePullPolicy: Always
           ports:
             - containerPort: 8089

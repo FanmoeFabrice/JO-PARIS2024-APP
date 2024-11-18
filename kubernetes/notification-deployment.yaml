@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: notification-service
-          image: docker.io/steveaurel/notification-service:1.0.0
+          image: docker.io/fabricefanmoe/notification-service:1.0.0
           imagePullPolicy: Always
           ports:
             - containerPort: 8084
