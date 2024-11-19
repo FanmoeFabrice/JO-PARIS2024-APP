@@ -41,7 +41,7 @@ eureka:
 
   client:
     service-url:
-      defaultZone: ${EUREKA_SERVER_URL:https://discovery-service.up.railway.app/eureka}
+      defaultZone: https://discovery-service.up.railway.app/eureka
     # Activer le registre d'Eureka même en local
     register-with-eureka: true
     fetch-registry: true
