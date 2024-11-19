@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: ${PORT:8082} # Railway utilisera le port dynamique, 8082 en local
   forward-headers-strategy: framework
 
 jwt:
@@ -35,9 +35,16 @@ springdoc:
 eureka:
   instance:
     prefer-ip-address: true
+    # Pour afficher l'URL dynamique sur Eureka
+    hostname: ${HOSTNAME:auth-service}
+
+
   client:
     service-url:
-      defaultZone: ${DISCOVERY_SERVICE_URL:http://localhost:8761/eureka}
+      defaultZone: ${EUREKA_SERVER_URL:https://discovery-service.up.railway.app/eureka}
+    # Activer le registre d'Eureka même en local
+    register-with-eureka: true
+    fetch-registry: true
 
 management:
   endpoints:
