@@ -129,7 +129,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.authservice.AuthServiceApplication</mainClass>
+                            <mainClass>com.infoevent.authservice.AuthServiceApplication</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -141,5 +141,6 @@
             </plugin>
         </plugins>
     </build>
+
 
 </project>
